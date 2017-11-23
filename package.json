@@ -1,10 +1,11 @@
 {
   "scripts": {
-    "install-all": "npm install && jspm install",
-    "prebuild": "node scripts/initialLinkedSync.js",
+    "postinstall": "jspm install",
+    "prebuild": "node scripts/initialLinkedSync.js && node scripts/prepareBabelSetup.js",
     "build": "jspm build src/App.js www/bundle.js",
     "postbuild": "echo Build finished at `date`",
     "start": "electron www/electron.js",
+    "prewatch": "node scripts/prepareBabelSetup.js",
     "watch": "node scripts/linkedWatcher.js",
     "gen-keystore": "keytool -genkey -v -keystore release.keystore -alias release -keyalg RSA -keysize 2048 -validity 10000",
     "gen-icons": "node ./scripts/generateIcons.js",
@@ -116,8 +117,11 @@
     }
   },
   "devDependencies": {
-    "jspm": "^0.17.0-beta.22",
+    "jspm": "^0.17.0-beta.44",
     "jspm-git": "^0.5.0-beta.3",
     "splashicon-generator": "^0.2.7"
+  },
+  "dependencies": {
+    "callback-promise": "^0.3.0"
   }
 }
