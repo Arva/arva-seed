@@ -13,21 +13,17 @@
     "release": "npm i && jspm i && npm run build && npm run gen-icons && cordova build --release && npm run copy-apk && echo Release done at `date`"
   },
   "arva": {
-    "links": {
-      "arva-js": "../arva-js",
-      "famous": "../famous",
-      "famous-flex": "../famous-flex"
-    }
+    "links": {}
   },
   "jspm": {
     "name": "nl.bizboard.arva.seed",
     "main": "main.js",
     "dependencies": {
-      "arva-js": "github:bizboard/arva-js@develop",
+      "arva-js": "github:arva/arva-js@develop",
       "babel-polyfill": "npm:babel-polyfill@^6.9.1",
       "css": "github:systemjs/plugin-css@^0.1.23",
       "es6-map": "npm:es6-map@^0.1.4",
-      "famous": "github:bizboard/famous@develop",
+      "famous": "github:bizboard/famous@wip-data-binding",
       "famous-autosizetextarea": "github:ijzerenhein/famous-autosizetextarea@^0.3.1",
       "famous-flex": "github:bizboard/famous-flex@master",
       "fastclick": "npm:fastclick@1.0.6",
@@ -79,6 +75,16 @@
           }
         }
       },
+      "github:firebase/firebase-bower@3.9.0": {
+        "main": "firebase.js",
+        "registry": "jspm",
+        "meta": {
+          "firebase.js": {
+            "exports": "firebase",
+            "format": "global"
+          }
+        }
+      },
       "npm:debug@2.2.0": {
         "main": "browser.js",
         "jspmNodeConversion": false,
@@ -119,9 +125,9 @@
   "devDependencies": {
     "jspm": "^0.17.0-beta.44",
     "jspm-git": "^0.5.0-beta.3",
-    "splashicon-generator": "^0.2.7"
-  },
-  "dependencies": {
+    "splashicon-generator": "^0.2.7",
+    "copy-dir": "^0.3.0",
     "callback-promise": "^0.3.0"
-  }
+  },
+  "dependencies": {}
 }

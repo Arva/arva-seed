@@ -368,7 +368,7 @@ SystemJS.config({
     'fastclick': 'npm:fastclick@1.0.6',
     'famous-autosizetextarea': 'github:ijzerenhein/famous-autosizetextarea@0.3.1',
     'es6-map': 'npm:es6-map@0.1.4',
-    'arva-js': 'github:bizboard/arva-js@develop',
+    'arva-js': 'github:arva/arva-js@develop',
     'assert': 'npm:jspm-nodelibs-assert@0.2.0',
     'babel-polyfill': 'npm:babel-polyfill@6.9.1',
     'buffer': 'npm:jspm-nodelibs-buffer@0.2.0',
@@ -377,7 +377,7 @@ SystemJS.config({
     'crypto': 'npm:jspm-nodelibs-crypto@0.2.0',
     'css': 'github:systemjs/plugin-css@0.1.23',
     'events': 'npm:jspm-nodelibs-events@0.2.0',
-    'famous': 'github:bizboard/famous@develop',
+    'famous': 'github:bizboard/famous@wip-data-binding',
     'famous-flex': 'github:bizboard/famous-flex@master',
     'firebase': 'github:firebase/firebase-bower@3.3.0',
     'fs': 'npm:jspm-nodelibs-fs@0.2.0',
@@ -503,33 +503,6 @@ SystemJS.config({
       'map': {
         'inherits': 'npm:inherits@2.0.1',
         'minimalistic-assert': 'npm:minimalistic-assert@1.0.0'
-      }
-    },
-    'github:bizboard/arva-js@develop': {
-      'map': {
-        'bowser': 'npm:bowser@1.4.4',
-        'eventemitter3': 'npm:eventemitter3@1.2.0',
-        'camelcase': 'npm:camelcase@2.1.1',
-        'ordered-hashmap': 'npm:ordered-hashmap@1.0.0',
-        'lodash': 'npm:lodash@4.15.0',
-        'fastclick': 'npm:fastclick@1.0.6',
-        'xml2js': 'npm:xml2js@0.4.17',
-        'firebase': 'github:firebase/firebase-bower@3.3.0',
-        'request-animation-frame-mock': 'github:erykpiast/request-animation-frame-mock@0.1.8',
-        'famous': 'github:bizboard/famous@develop',
-        'famous-flex': 'github:bizboard/famous-flex@master',
-        'lodash-decorators': 'npm:lodash-decorators@3.0.2'
-      }
-    },
-    'npm:xml2js@0.4.17': {
-      'map': {
-        'xmlbuilder': 'npm:xmlbuilder@4.2.1',
-        'sax': 'npm:sax@1.2.1'
-      }
-    },
-    'npm:xmlbuilder@4.2.1': {
-      'map': {
-        'lodash': 'npm:lodash@4.15.0'
       }
     },
     'npm:jspm-nodelibs-buffer@0.2.0': {
@@ -748,6 +721,27 @@ SystemJS.config({
       'map': {
         'es6-iterator': 'npm:es6-iterator@2.0.0',
         'es6-symbol': 'npm:es6-symbol@3.1.0'
+      }
+    },
+    'github:arva/arva-js@develop': {
+      'map': {
+        'firebase': 'github:firebase/firebase-bower@3.9.0',
+        'bowser': 'npm:bowser@1.8.1',
+        'camelcase': 'npm:camelcase@2.1.1',
+        'eventemitter3': 'npm:eventemitter3@1.2.0',
+        'fastclick': 'npm:fastclick@1.0.6',
+        'lodash': 'npm:lodash@4.17.4',
+        'lodash-decorators': 'npm:lodash-decorators@3.0.2',
+        'ordered-hashmap': 'npm:ordered-hashmap@1.0.0',
+        'xml2js': 'npm:xml2js@0.4.19',
+        'famous-flex': 'github:bizboard/famous-flex@master',
+        'request-animation-frame-mock': 'github:erykpiast/request-animation-frame-mock@0.1.8'
+      }
+    },
+    'npm:xml2js@0.4.19': {
+      'map': {
+        'xmlbuilder': 'npm:xmlbuilder@9.0.4',
+        'sax': 'npm:sax@1.2.4'
       }
     }
   }
