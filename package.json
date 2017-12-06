@@ -19,7 +19,8 @@
     "name": "nl.bizboard.arva.seed",
     "main": "main.js",
     "dependencies": {
-      "arva-js": "github:arva/arva-js@develop",
+      "arva-js": "github:mysim1/arva-js@html5-surfaces",
+      "arva-kit": "bitbucket:bizboard/arva-kit@studio",
       "babel-polyfill": "npm:babel-polyfill@^6.9.1",
       "css": "github:systemjs/plugin-css@^0.1.23",
       "es6-map": "npm:es6-map@^0.1.4",
@@ -65,16 +66,6 @@
       "vm": "npm:jspm-nodelibs-vm@^0.2.0"
     },
     "overrides": {
-      "github:firebase/firebase-bower@3.3.0": {
-        "main": "firebase.js",
-        "registry": "jspm",
-        "meta": {
-          "firebase.js": {
-            "exports": "firebase",
-            "format": "global"
-          }
-        }
-      },
       "github:firebase/firebase-bower@3.9.0": {
         "main": "firebase.js",
         "registry": "jspm",
@@ -99,16 +90,10 @@
           "util": "@node/util"
         }
       },
-      "npm:inherits@2.0.1": {
+      "npm:inherits@2.0.3": {
         "ignore": [
           "test.js"
         ]
-      },
-      "npm:lodash@4.15.0": {
-        "map": {
-          "buffer": "@empty",
-          "process": "@empty"
-        }
       },
       "npm:lodash@4.17.4": {
         "map": {
@@ -119,6 +104,12 @@
       "npm:ms@0.7.1": {
         "jspmNodeConversion": false,
         "format": "cjs"
+      },
+      "npm:pbkdf2@3.0.14": {
+        "main": "browser.js"
+      },
+      "npm:safe-buffer@5.1.1": {
+        "browser": "index.js"
       }
     }
   },
