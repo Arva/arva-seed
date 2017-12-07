@@ -1,19 +1,22 @@
-import 'babel-polyfill';
-import firebase                     from 'firebase';
+import 'arva-js/utils/DebuggerTools.js';
+import firebase from 'firebase';
 
-import {FirebaseDataSource}         from 'arva-js/data/datasources/FirebaseDataSource.js';
+import {FirebaseDataSource} from 'arva-js/data/datasources/FirebaseDataSource.js';
 import 'arva-js/utils/hotfixes/IESupport.js';
-import {provide}                    from 'arva-js/utils/di/Decorators.js';
-import {Injection}                  from 'arva-js/utils/Injection.js';
-import {DataSource}                 from 'arva-js/data/DataSource.js';
-import {App as ArvaApp}             from 'arva-js/core/App.js';
+import {provide} from 'arva-js/utils/di/Decorators.js';
+import {Injection} from 'arva-js/utils/Injection.js';
+import {DataSource} from 'arva-js/data/DataSource.js';
+import {App as ArvaApp} from 'arva-js/core/App.js';
 
 /* Importing CSS in jspm bundled builds injects them into the DOM automagically */
 import './famous.css';
 import './fonts.css';
 
 /* Here we import all controllers we want to use in the app */
-import {HomeController}             from './controllers/HomeController.js';
+import {HomeController} from './controllers/HomeController.js';
+import {Router} from 'arva-js/core/Router';
+import AnimationController from 'famous-flex/AnimationController';
+import Transform from 'famous/core/Transform.js';
 
 export class App extends ArvaApp {
 
@@ -40,7 +43,7 @@ export class App extends ArvaApp {
      *  Called before the App is constructed and before the basic components (Router, Famous Context, Controllers,
      *  DataSource) have loaded.
      */
-    static initialize(){
+    static initialize() {
         /* Change initial route, view animation or something needed before we start */
         provide(DataSource)(App.defaultDataSource);
         this.start();
@@ -50,7 +53,15 @@ export class App extends ArvaApp {
      * Called after the Router, Famous Context, and Controllers have been instantiated,
      * but before any Controller method is executed by the Router.
      */
-    static loaded(){
+    static loaded() {
+        Injection.get(Router).setControllerSpecs({
+            HomeController: {
+                methods: {
+
+                }
+            }
+        })
+
         /* Instantiate things you need before the router is executed here. For example:
          *
          * this.references.menu = Injection.get(Menu); */
@@ -60,7 +71,7 @@ export class App extends ArvaApp {
      * Called by super class after all components (routing, controllers, views, etc.) have been loaded and the
      * app is up and running.
      */
-    static done(){
+    static done() {
     }
 }
 

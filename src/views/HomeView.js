@@ -1,59 +1,66 @@
-import Surface                  from 'famous/core/Surface.js';
-import {AudioSurface}           from 'arva-js/surfaces/AudioSurface.js';
-import {EqualizerSurface}       from '../components/EqualizerSurface.js';
-import {View}                   from 'arva-js/core/View.js';
-import {layout,
+import Surface from 'famous/core/Surface.js';
+import {AudioSurface} from 'arva-js/surfaces/AudioSurface.js';
+import {View} from 'arva-js/core/View.js';
+import {
+    layout,
     event,
-    bindings, flow}             from  'arva-js/layout/Decorators.js';
+    bindings, flow, dynamic
+} from 'arva-js/layout/Decorators.js';
+import Easing from 'famous/transitions/Easing.js';
+import {TextButton}     from 'arva-kit/buttons/TextButton.js';
 
 @bindings.setup({
-    welcomeName: 'noName'
+    buttonIsFullScreen: false,
+    rotateButton: false
 })
 
 export class HomeView extends View {
 
-  @layout.fullSize()
-  background = new Surface({properties: {backgroundColor: '#000A0A'}})
+    @layout.fullSize()
+    background = Surface.with({properties: {backgroundColor: '#000A0A'}});
 
-
-    @event.on('click', function () {
-      this.options.welcomeName = 'you clicked me...';
-      this._startAudio();
-    })
-    @flow.auto()
     @layout
-        .size(~100, ~25)
         .stick.center()
+        .size(200, true)
+        .translate(0, 0, 100)
+    @dynamic(({buttonIsFullScreen}) =>
+        flow.transition({duration: 1000, curve: Easing.inCubic})(
+            layout
+                .opacity(buttonIsFullScreen ? 1 : 0)
+                .rotate(...(buttonIsFullScreen ? [0, 0, 0] : [Math.PI, Math.PI * 1.5, 0]))
+        )
+    )
+    someButton = TextButton.with({content: 'Go!', clickEventName: 'escapeScreen'});
 
-    message = new Surface({content: `Hello ${this.options.welcomeName}`, properties: {textAlign: 'center'}});
-
-    @layout
-        .size(~100, ~25)
-        .stick.top()
-    audio = new AudioSurface({properties: {url: 'http://webaudioapi.com/samples/audio-tag/chrono.mp3'}});
-
-    @layout
-        .size(true, ~400)
-        .stick.bottom()
-    visualizer = new EqualizerSurface();
-
-    @bindings.preprocess()
-    _someTrigger() {
-      debugger;
-      //console.log(this.options.welcomeName);
-      let x = this.options.welcomeName2;
-      x + x + " yo";
-    }
-
-
-    _startAudio() {
-      this.audio.startAnalyser();
-      this.audio.on('frequencydata', (streamData) => {
-        this.visualizer._draw(this.audio.bufferLength, streamData);
-      });
-
-      this.audio.play();
-    }
-
+    @dynamic(({buttonIsFullScreen}) =>
+        buttonIsFullScreen ?
+            flow.transition({duration: 300, curve: Easing.inCubic})(
+                layout.stick.center()
+            ).transition({duration: 300, curve: Easing.inCubic})(
+                layout
+                    .size((width, height) => width * 2, (width, height) => height * 2)
+                    .rotate(0, 0, 2 * Math.PI)
+            )
+            :
+            flow.transition({duration: 300, curve: Easing.inCubic})(
+                layout
+                    .translate(0, 50, 10)
+                    .stick.bottom()
+                    .size(100, 100)
+                    .rotate(0, 0, 0)
+            )
+    )
+    @event.on('mouseover', function () {
+        this.options.buttonIsFullScreen = true;
+    })
+    @event.on('click', function () {
+        this.options.buttonIsFullScreen = false;
+    })
+    button = Surface.with({
+        properties: {
+            backgroundColor: 'antiquewhite',
+            borderRadius: '30%'
+        }
+    });
 
 }

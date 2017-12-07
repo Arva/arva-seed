@@ -69,15 +69,11 @@ let duplicateSymlinkedModules = (sourceDirectory, targetDirectory) => {
                     console.error(`Directory doesn't exist: ${globalPath}. Link doesn't seem properly configured`);
                     process.exit(1);
                 }
-                console.log(`GlobalPath: ${JSON.stringify(globalPath)}`);
-                console.log(`SymlinkName: ${JSON.stringify(symlinkName)}`);
                 fs.symlinkSync(globalPath, symlinkName);
             } else {
                 /* Check if already exists because there can be cases where there is more than one version of a
                  * package installed. Currently, that isn't something we differentiate
                  */
-                console.log(`GlobalPath: ${JSON.stringify(globalPath)}`);
-                console.log(`SymlinkName: ${JSON.stringify(symlinkName)}`);
                 if(!fs.existsSync(symlinkName)){
                     fs.symlinkSync(path.join(innerDirectory, fileName), symlinkName);
                 }

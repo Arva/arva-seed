@@ -13,13 +13,16 @@
     "release": "npm i && jspm i && npm run build && npm run gen-icons && cordova build --release && npm run copy-apk && echo Release done at `date`"
   },
   "arva": {
-    "links": {}
+    "links": {
+      "arva-js": "../arva-js",
+      "famous-flex": "../famous-flex"
+    }
   },
   "jspm": {
     "name": "nl.bizboard.arva.seed",
     "main": "main.js",
     "dependencies": {
-      "arva-js": "github:mysim1/arva-js@html5-surfaces",
+      "arva-js": "github:arva/arva-js@develop",
       "arva-kit": "bitbucket:bizboard/arva-kit@studio",
       "babel-polyfill": "npm:babel-polyfill@^6.9.1",
       "css": "github:systemjs/plugin-css@^0.1.23",
