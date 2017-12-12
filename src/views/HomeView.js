@@ -11,13 +11,22 @@ import {TextButton}     from 'arva-kit/buttons/TextButton.js';
 
 @bindings.setup({
     buttonIsFullScreen: false,
-    rotateButton: false
+    rotateButton: false,
+    array: [1,2,3,4]
 })
-
 export class HomeView extends View {
 
     @layout.fullSize()
-    background = Surface.with({properties: {backgroundColor: '#000A0A'}});
+    background = Surface.with({properties: {backgroundColor: this.options.buttonIsFullScreen ? '#000A0A' : 'red'}});
+
+
+    @layout
+        .dock.top(20)
+        .translate(0, 0, 20)
+    list = this.options.array.map((number) =>
+        Surface.with({content: `Number ${number}`, properties: {color: 'white'}})
+    );
+
 
     @layout
         .stick.center()
