@@ -1,8 +1,3 @@
-import 'babel-polyfill';
-import firebase                     from 'firebase';
-
-import {FirebaseDataSource}         from 'arva-js/data/datasources/FirebaseDataSource.js';
-import 'arva-js/utils/hotfixes/IESupport.js';
 import {provide}                    from 'arva-js/utils/di/Decorators.js';
 import {Injection}                  from 'arva-js/utils/Injection.js';
 import {DataSource}                 from 'arva-js/data/DataSource.js';
@@ -17,24 +12,9 @@ import {HomeController}             from './controllers/HomeController.js';
 
 export class App extends ArvaApp {
 
-    /* References to Dependency Injection created App and Controller instances, so they are not garbage collected. */
-    static references = {};
 
     /* The controllers that will be used in the app. */
     static controllers = [HomeController];
-
-
-    /* Define which DataSource to use */
-    static defaultDataSource() {
-        /* Firebase initialization */
-        firebase.initializeApp({
-            apiKey: '<api-key>',
-            authDomain: '<subdomain>.firebaseapp.com',
-            databaseURL: 'https://<subdomain>.firebaseio.com',
-            storageBucket: '<subdomain>.appspot.com'
-        });
-        return new FirebaseDataSource('/', {});
-    }
 
     /**
      *  Called before the App is constructed and before the basic components (Router, Famous Context, Controllers,
@@ -42,7 +22,6 @@ export class App extends ArvaApp {
      */
     static initialize(){
         /* Change initial route, view animation or something needed before we start */
-        provide(DataSource)(App.defaultDataSource);
         this.start();
     }
 
