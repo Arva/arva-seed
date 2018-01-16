@@ -37,11 +37,21 @@ let compatibilityBabelPlugins = {
 }
 
 let modernBabelPlugin = {
-  'plugins': ['babel-plugin-transform-decorators-legacy', 'babel-plugin-transform-class-properties'],
-  'es2015': false,
-  'stage3': true,
-  'stage2': true,
-  'stage1': false
+        'plugins': [
+            'babel-plugin-syntax-class-properties',
+            'babel-plugin-transform-es2015-destructuring',
+            'babel-plugin-transform-object-rest-spread',
+            'babel-plugin-transform-decorators-legacy',
+            'babel-plugin-transform-class-properties',
+            'babel-plugin-syntax-async-functions',
+            'babel-plugin-transform-es2015-spread',
+            'babel-plugin-transform-runtime-constructor-name'
+        ],
+        'es2016': false,
+        'es2015': false,
+        'stage3': false,
+        'stage2': true,
+        'stage1': true
 };
 
 
