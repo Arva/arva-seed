@@ -20,7 +20,7 @@
     "main": "main.js",
     "dependencies": {
       "arva-js": "github:mysim1/arva-js@html5-surfaces",
-      "arva-kit": "bitbucket:bizboard/arva-kit@studio",
+      "arva-kit": "github:arva/arva-ui-kit@master",
       "babel-plugin-syntax-async-functions": "npm:babel-plugin-syntax-async-functions@^6.13.0",
       "babel-plugin-syntax-class-properties": "npm:babel-plugin-syntax-class-properties@^6.13.0",
       "babel-plugin-transform-class-properties": "npm:babel-plugin-transform-class-properties@^6.24.1",
@@ -70,16 +70,6 @@
       "vm": "npm:jspm-nodelibs-vm@^0.2.0"
     },
     "overrides": {
-      "github:firebase/firebase-bower@3.3.0": {
-        "main": "firebase.js",
-        "registry": "jspm",
-        "meta": {
-          "firebase.js": {
-            "exports": "firebase",
-            "format": "global"
-          }
-        }
-      },
       "github:firebase/firebase-bower@3.9.0": {
         "main": "firebase.js",
         "registry": "jspm",

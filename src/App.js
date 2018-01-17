@@ -7,8 +7,16 @@ import {App as ArvaApp}             from 'arva-js/core/App.js';
 import './famous.css';
 import './fonts.css';
 
+
+
 /* Here we import all controllers we want to use in the app */
 import {HomeController}             from './controllers/HomeController.js';
+import {NavigationDrawer}           from 'arva-kit/menus/navigationDrawer/NavigationDrawer.js';
+import {ImageSideMenuView}          from 'arva-kit/menus/navigationDrawer/sideMenus/ImageSideMenuView.js';
+import {AccountIcon}                from 'arva-kit/icons/AccountIcon.js';
+
+
+
 
 export class App extends ArvaApp {
 
@@ -30,9 +38,24 @@ export class App extends ArvaApp {
      * but before any Controller method is executed by the Router.
      */
     static loaded(){
+
         /* Instantiate things you need before the router is executed here. For example:
          *
          * this.references.menu = Injection.get(Menu); */
+        Injection.provide(NavigationDrawer, new NavigationDrawer({
+            topMenuOptions: { defaultTitle: 'Arva Application' },
+            sideMenu: {
+                viewClass: ImageSideMenuView,
+                image: 'http://arva.io/img/hub.png',
+                menuItems: [{
+                    icon: AccountIcon,
+                    text: 'Menu item 1'
+                }]
+            }
+        }));
+        let menu = Injection.get(NavigationDrawer);
+
+        menu.setNavigationDrawerEnabled(true);
     }
 
     /**

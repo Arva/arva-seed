@@ -181,7 +181,7 @@ SystemJS.config({
     }
   },
   map: {
-    'text': 'github:bizboard/arva-js@develop/utils/IconLoader.js'
+    'text': 'github:arva/arva-js@develop/utils/IconLoader.js'
   }
 });
 
@@ -201,12 +201,12 @@ SystemJS.config({
     'babel-plugin-transform-decorators-legacy': 'npm:babel-plugin-transform-decorators-legacy@1.3.4',
     'babel-plugin-transform-object-rest-spread': 'npm:babel-plugin-transform-object-rest-spread@6.26.0',
     'babel-plugin-transform-es2015-destructuring': 'npm:babel-plugin-transform-es2015-destructuring@6.23.0',
-    'arva-kit': 'bitbucket:bizboard/arva-kit@studio',
+    'arva-kit': 'github:arva/arva-ui-kit@master',
     'fastclick': 'npm:fastclick@1.0.6',
     'famous-autosizetextarea': 'github:ijzerenhein/famous-autosizetextarea@0.3.1',
-    'es6-map': 'npm:es6-map@0.1.4',
+    'es6-map': 'npm:es6-map@0.1.5',
     'arva-js': 'github:arva/arva-js@develop',
-    'assert': 'npm:jspm-nodelibs-assert@0.2.0',
+    'assert': 'npm:jspm-nodelibs-assert@0.2.1',
     'babel-polyfill': 'npm:babel-polyfill@6.9.1',
     'buffer': 'npm:jspm-nodelibs-buffer@0.2.3',
     'child_process': 'npm:jspm-nodelibs-child_process@0.2.0',
@@ -216,7 +216,7 @@ SystemJS.config({
     'events': 'npm:jspm-nodelibs-events@0.2.2',
     'famous': 'github:bizboard/famous@wip-data-binding',
     'famous-flex': 'github:bizboard/famous-flex@master',
-    'firebase': 'github:firebase/firebase-bower@3.3.0',
+    'firebase': 'github:firebase/firebase-bower@3.9.0',
     'fs': 'npm:jspm-nodelibs-fs@0.2.1',
     'lodash': 'npm:lodash@4.17.4',
     'os': 'npm:jspm-nodelibs-os@0.2.0',
@@ -237,7 +237,7 @@ SystemJS.config({
     },
     'npm:timers-browserify@1.4.2': {
       'map': {
-        'process': 'npm:process@0.11.8'
+        'process': 'npm:process@0.11.10'
       }
     },
     'npm:babel-polyfill@6.9.1': {
@@ -323,105 +323,43 @@ SystemJS.config({
     'npm:es6-map@0.1.5': {
       'map': {
         'd': 'npm:d@1.0.0',
-        'es6-iterator': 'npm:es6-iterator@2.0.1',
+        'es6-iterator': 'npm:es6-iterator@2.0.3',
         'event-emitter': 'npm:event-emitter@0.3.5',
         'es6-symbol': 'npm:es6-symbol@3.1.1',
         'es6-set': 'npm:es6-set@0.1.5',
-        'es5-ext': 'npm:es5-ext@0.10.23'
+        'es5-ext': 'npm:es5-ext@0.10.38'
       }
     },
     'npm:es6-symbol@3.1.1': {
       'map': {
-        'es5-ext': 'npm:es5-ext@0.10.23',
+        'es5-ext': 'npm:es5-ext@0.10.38',
         'd': 'npm:d@1.0.0'
       }
     },
     'npm:event-emitter@0.3.5': {
       'map': {
-        'es5-ext': 'npm:es5-ext@0.10.23',
-        'd': 'npm:d@1.0.0'
-      }
-    },
-    'npm:es6-iterator@2.0.1': {
-      'map': {
-        'es5-ext': 'npm:es5-ext@0.10.23',
-        'es6-symbol': 'npm:es6-symbol@3.1.1',
+        'es5-ext': 'npm:es5-ext@0.10.38',
         'd': 'npm:d@1.0.0'
       }
     },
     'npm:es6-set@0.1.5': {
       'map': {
-        'es5-ext': 'npm:es5-ext@0.10.23',
-        'es6-iterator': 'npm:es6-iterator@2.0.1',
+        'es5-ext': 'npm:es5-ext@0.10.38',
+        'es6-iterator': 'npm:es6-iterator@2.0.3',
         'es6-symbol': 'npm:es6-symbol@3.1.1',
         'event-emitter': 'npm:event-emitter@0.3.5',
         'd': 'npm:d@1.0.0'
       }
     },
-    'npm:es5-ext@0.10.23': {
-      'map': {
-        'es6-iterator': 'npm:es6-iterator@2.0.1',
-        'es6-symbol': 'npm:es6-symbol@3.1.1'
-      }
-    },
     'npm:d@1.0.0': {
       'map': {
-        'es5-ext': 'npm:es5-ext@0.10.23'
-      }
-    },
-    'npm:es6-map@0.1.4': {
-      'map': {
-        'd': 'npm:d@0.1.1',
-        'es6-iterator': 'npm:es6-iterator@2.0.0',
-        'es6-set': 'npm:es6-set@0.1.4',
-        'event-emitter': 'npm:event-emitter@0.3.4',
-        'es6-symbol': 'npm:es6-symbol@3.1.0',
-        'es5-ext': 'npm:es5-ext@0.10.12'
-      }
-    },
-    'npm:event-emitter@0.3.4': {
-      'map': {
-        'd': 'npm:d@0.1.1',
-        'es5-ext': 'npm:es5-ext@0.10.12'
-      }
-    },
-    'npm:es6-set@0.1.4': {
-      'map': {
-        'd': 'npm:d@0.1.1',
-        'es6-iterator': 'npm:es6-iterator@2.0.0',
-        'es6-symbol': 'npm:es6-symbol@3.1.0',
-        'event-emitter': 'npm:event-emitter@0.3.4',
-        'es5-ext': 'npm:es5-ext@0.10.12'
-      }
-    },
-    'npm:es6-iterator@2.0.0': {
-      'map': {
-        'd': 'npm:d@0.1.1',
-        'es5-ext': 'npm:es5-ext@0.10.12',
-        'es6-symbol': 'npm:es6-symbol@3.1.0'
-      }
-    },
-    'npm:d@0.1.1': {
-      'map': {
-        'es5-ext': 'npm:es5-ext@0.10.12'
-      }
-    },
-    'npm:es6-symbol@3.1.0': {
-      'map': {
-        'es5-ext': 'npm:es5-ext@0.10.12',
-        'd': 'npm:d@0.1.1'
-      }
-    },
-    'npm:es5-ext@0.10.12': {
-      'map': {
-        'es6-iterator': 'npm:es6-iterator@2.0.0',
-        'es6-symbol': 'npm:es6-symbol@3.1.0'
+        'es5-ext': 'npm:es5-ext@0.10.38'
       }
     },
     'github:arva/arva-js@develop': {
       'map': {
         'firebase': 'github:firebase/firebase-bower@3.9.0',
-        'bowser': 'npm:bowser@1.8.1',
+        'bowser': 'npm:bowser@1.4.3',
         'camelcase': 'npm:camelcase@2.1.1',
         'eventemitter3': 'npm:eventemitter3@1.2.0',
         'fastclick': 'npm:fastclick@1.0.6',
@@ -437,18 +375,6 @@ SystemJS.config({
       'map': {
         'xmlbuilder': 'npm:xmlbuilder@9.0.4',
         'sax': 'npm:sax@1.2.4'
-      }
-    },
-    'bitbucket:bizboard/arva-kit@studio': {
-      'map': {
-        'famous-autosizetextarea': 'github:ijzerenhein/famous-autosizetextarea@0.3.1',
-        'lodash': 'npm:lodash@4.17.4',
-        'degrees-radians': 'npm:degrees-radians@1.0.3',
-        'color': 'npm:color@0.11.4',
-        'rgbcolor': 'npm:rgbcolor@0.0.4',
-        'bowser': 'npm:bowser@1.4.3',
-        'arva-js': 'github:arva/arva-js@develop',
-        'famous-bkimagesurface': 'github:bizboard/famous-bkimagesurface@master'
       }
     },
     'npm:color@0.11.4': {
@@ -792,6 +718,31 @@ SystemJS.config({
     'npm:babel-plugin-transform-es2015-spread@6.22.0': {
       'map': {
         'babel-runtime': 'npm:babel-runtime@6.26.0'
+      }
+    },
+    'github:arva/arva-ui-kit@master': {
+      'map': {
+        'rgbcolor': 'npm:rgbcolor@0.0.4',
+        'bowser': 'npm:bowser@1.4.3',
+        'degrees-radians': 'npm:degrees-radians@1.0.3',
+        'color': 'npm:color@0.11.4',
+        'lodash': 'npm:lodash@4.17.4',
+        'famous-autosizetextarea': 'github:ijzerenhein/famous-autosizetextarea@0.3.1',
+        'famous-bkimagesurface': 'github:bizboard/famous-bkimagesurface@master',
+        'arva-js': 'github:arva/arva-js@develop'
+      }
+    },
+    'npm:es6-iterator@2.0.3': {
+      'map': {
+        'es6-symbol': 'npm:es6-symbol@3.1.1',
+        'd': 'npm:d@1.0.0',
+        'es5-ext': 'npm:es5-ext@0.10.38'
+      }
+    },
+    'npm:es5-ext@0.10.38': {
+      'map': {
+        'es6-iterator': 'npm:es6-iterator@2.0.3',
+        'es6-symbol': 'npm:es6-symbol@3.1.1'
       }
     }
   }
