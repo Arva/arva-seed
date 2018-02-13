@@ -75,7 +75,7 @@ SystemJS.config({
       'npm:stream-http@2.3.0': {
         'map': {
           'inherits': 'npm:inherits@2.0.3',
-          'readable-stream': 'npm:readable-stream@2.3.3',
+          'readable-stream': 'npm:readable-stream@2.3.4',
           'builtin-status-codes': 'npm:builtin-status-codes@2.0.0',
           'xtend': 'npm:xtend@4.0.1',
           'to-arraybuffer': 'npm:to-arraybuffer@1.0.1'
@@ -97,7 +97,7 @@ SystemJS.config({
         'map': {
           'babel-runtime': 'npm:babel-runtime@6.26.0',
           'babel-types': 'npm:babel-types@6.26.0',
-          'lodash': 'npm:lodash@4.17.4',
+          'lodash': 'npm:lodash@4.17.5',
           'babel-helper-function-name': 'npm:babel-helper-function-name@6.24.1'
         }
       },
@@ -218,20 +218,20 @@ SystemJS.config({
     'famous-flex': 'github:bizboard/famous-flex@master',
     'firebase': 'github:firebase/firebase-bower@3.9.0',
     'fs': 'npm:jspm-nodelibs-fs@0.2.1',
-    'lodash': 'npm:lodash@4.17.4',
+    'lodash': 'npm:lodash@4.17.5',
     'os': 'npm:jspm-nodelibs-os@0.2.0',
     'path': 'npm:jspm-nodelibs-path@0.2.0',
-    'process': 'npm:jspm-nodelibs-process@0.2.0',
+    'process': 'npm:jspm-nodelibs-process@0.2.1',
     'stream': 'npm:jspm-nodelibs-stream@0.2.1',
     'string_decoder': 'npm:jspm-nodelibs-string_decoder@0.2.2',
-    'timers': 'npm:jspm-nodelibs-timers@0.2.0',
+    'timers': 'npm:jspm-nodelibs-timers@0.2.1',
     'util': 'npm:jspm-nodelibs-util@0.2.2',
-    'vm': 'npm:jspm-nodelibs-vm@0.2.0'
+    'vm': 'npm:jspm-nodelibs-vm@0.2.1'
   },
   packages: {
     'npm:stream-browserify@2.0.1': {
       'map': {
-        'readable-stream': 'npm:readable-stream@2.3.3',
+        'readable-stream': 'npm:readable-stream@2.3.4',
         'inherits': 'npm:inherits@2.0.3'
       }
     },
@@ -300,11 +300,6 @@ SystemJS.config({
         'os-browserify': 'npm:os-browserify@0.2.1'
       }
     },
-    'npm:jspm-nodelibs-timers@0.2.0': {
-      'map': {
-        'timers-browserify': 'npm:timers-browserify@1.4.2'
-      }
-    },
     'npm:jspm-nodelibs-crypto@0.2.0': {
       'map': {
         'crypto-browserify': 'npm:crypto-browserify@3.12.0'
@@ -317,7 +312,7 @@ SystemJS.config({
     },
     'npm:lodash-decorators@3.0.2': {
       'map': {
-        'lodash': 'npm:lodash@4.17.4'
+        'lodash': 'npm:lodash@4.17.5'
       }
     },
     'npm:es6-map@0.1.5': {
@@ -363,7 +358,7 @@ SystemJS.config({
         'camelcase': 'npm:camelcase@2.1.1',
         'eventemitter3': 'npm:eventemitter3@1.2.0',
         'fastclick': 'npm:fastclick@1.0.6',
-        'lodash': 'npm:lodash@4.17.4',
+        'lodash': 'npm:lodash@4.17.5',
         'lodash-decorators': 'npm:lodash-decorators@3.0.2',
         'ordered-hashmap': 'npm:ordered-hashmap@1.0.0',
         'xml2js': 'npm:xml2js@0.4.19',
@@ -373,7 +368,7 @@ SystemJS.config({
     },
     'npm:xml2js@0.4.19': {
       'map': {
-        'xmlbuilder': 'npm:xmlbuilder@9.0.4',
+        'xmlbuilder': 'npm:xmlbuilder@9.0.7',
         'sax': 'npm:sax@1.2.4'
       }
     },
@@ -443,13 +438,13 @@ SystemJS.config({
         'babel-types': 'npm:babel-types@6.26.0',
         'babel-traverse': 'npm:babel-traverse@6.26.0',
         'babylon': 'npm:babylon@6.18.0',
-        'lodash': 'npm:lodash@4.17.4'
+        'lodash': 'npm:lodash@4.17.5'
       }
     },
     'npm:babel-types@6.26.0': {
       'map': {
         'babel-runtime': 'npm:babel-runtime@6.26.0',
-        'lodash': 'npm:lodash@4.17.4',
+        'lodash': 'npm:lodash@4.17.5',
         'to-fast-properties': 'npm:to-fast-properties@1.0.3',
         'esutils': 'npm:esutils@2.0.2'
       }
@@ -459,7 +454,7 @@ SystemJS.config({
         'babel-runtime': 'npm:babel-runtime@6.26.0',
         'babel-types': 'npm:babel-types@6.26.0',
         'babylon': 'npm:babylon@6.18.0',
-        'lodash': 'npm:lodash@4.17.4',
+        'lodash': 'npm:lodash@4.17.5',
         'babel-code-frame': 'npm:babel-code-frame@6.26.0',
         'debug': 'npm:debug@2.6.9',
         'babel-messages': 'npm:babel-messages@6.23.0',
@@ -497,17 +492,6 @@ SystemJS.config({
     'npm:jspm-nodelibs-stream@0.2.1': {
       'map': {
         'stream-browserify': 'npm:stream-browserify@2.0.1'
-      }
-    },
-    'npm:readable-stream@2.3.3': {
-      'map': {
-        'inherits': 'npm:inherits@2.0.3',
-        'string_decoder': 'npm:string_decoder@1.0.3',
-        'safe-buffer': 'npm:safe-buffer@5.1.1',
-        'util-deprecate': 'npm:util-deprecate@1.0.2',
-        'process-nextick-args': 'npm:process-nextick-args@1.0.7',
-        'core-util-is': 'npm:core-util-is@1.0.2',
-        'isarray': 'npm:isarray@1.0.0'
       }
     },
     'npm:jspm-nodelibs-buffer@0.2.3': {
@@ -553,7 +537,7 @@ SystemJS.config({
         'safe-buffer': 'npm:safe-buffer@5.1.1',
         'create-hash': 'npm:create-hash@1.1.3',
         'cipher-base': 'npm:cipher-base@1.0.4',
-        'sha.js': 'npm:sha.js@2.4.9',
+        'sha.js': 'npm:sha.js@2.4.10',
         'ripemd160': 'npm:ripemd160@2.0.1'
       }
     },
@@ -561,7 +545,7 @@ SystemJS.config({
       'map': {
         'inherits': 'npm:inherits@2.0.3',
         'cipher-base': 'npm:cipher-base@1.0.4',
-        'sha.js': 'npm:sha.js@2.4.9',
+        'sha.js': 'npm:sha.js@2.4.10',
         'ripemd160': 'npm:ripemd160@2.0.1'
       }
     },
@@ -586,14 +570,8 @@ SystemJS.config({
         'safe-buffer': 'npm:safe-buffer@5.1.1',
         'create-hmac': 'npm:create-hmac@1.1.6',
         'create-hash': 'npm:create-hash@1.1.3',
-        'sha.js': 'npm:sha.js@2.4.9',
+        'sha.js': 'npm:sha.js@2.4.10',
         'ripemd160': 'npm:ripemd160@2.0.1'
-      }
-    },
-    'npm:sha.js@2.4.9': {
-      'map': {
-        'inherits': 'npm:inherits@2.0.3',
-        'safe-buffer': 'npm:safe-buffer@5.1.1'
       }
     },
     'npm:ripemd160@2.0.1': {
@@ -726,7 +704,7 @@ SystemJS.config({
         'bowser': 'npm:bowser@1.4.3',
         'degrees-radians': 'npm:degrees-radians@1.0.3',
         'color': 'npm:color@0.11.4',
-        'lodash': 'npm:lodash@4.17.4',
+        'lodash': 'npm:lodash@4.17.5',
         'famous-autosizetextarea': 'github:ijzerenhein/famous-autosizetextarea@0.3.1',
         'famous-bkimagesurface': 'github:bizboard/famous-bkimagesurface@master',
         'arva-js': 'github:arva/arva-js@develop'
@@ -743,6 +721,28 @@ SystemJS.config({
       'map': {
         'es6-iterator': 'npm:es6-iterator@2.0.3',
         'es6-symbol': 'npm:es6-symbol@3.1.1'
+      }
+    },
+    'npm:readable-stream@2.3.4': {
+      'map': {
+        'inherits': 'npm:inherits@2.0.3',
+        'string_decoder': 'npm:string_decoder@1.0.3',
+        'process-nextick-args': 'npm:process-nextick-args@2.0.0',
+        'isarray': 'npm:isarray@1.0.0',
+        'safe-buffer': 'npm:safe-buffer@5.1.1',
+        'core-util-is': 'npm:core-util-is@1.0.2',
+        'util-deprecate': 'npm:util-deprecate@1.0.2'
+      }
+    },
+    'npm:sha.js@2.4.10': {
+      'map': {
+        'inherits': 'npm:inherits@2.0.3',
+        'safe-buffer': 'npm:safe-buffer@5.1.1'
+      }
+    },
+    'npm:jspm-nodelibs-timers@0.2.1': {
+      'map': {
+        'timers-browserify': 'npm:timers-browserify@1.4.2'
       }
     }
   }

@@ -19,7 +19,7 @@
     "name": "nl.bizboard.arva.seed",
     "main": "main.js",
     "dependencies": {
-      "arva-js": "github:mysim1/arva-js@html5-surfaces",
+      "arva-js": "github:arva/arva-js@develop",
       "arva-kit": "github:arva/arva-ui-kit@master",
       "babel-plugin-syntax-async-functions": "npm:babel-plugin-syntax-async-functions@^6.13.0",
       "babel-plugin-syntax-class-properties": "npm:babel-plugin-syntax-class-properties@^6.13.0",
@@ -99,7 +99,7 @@
           "test.js"
         ]
       },
-      "npm:lodash@4.17.4": {
+      "npm:lodash@4.17.5": {
         "map": {
           "buffer": "@empty",
           "process": "@empty"
